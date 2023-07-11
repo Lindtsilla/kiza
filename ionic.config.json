@@ -1,0 +1,7 @@
+{
+  "name": "kiza",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
