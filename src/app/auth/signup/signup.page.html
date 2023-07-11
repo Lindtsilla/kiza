@@ -1,0 +1,89 @@
+
+<!--<ion-header  color="white">-->
+<!--  <ion-toolbar class="bg-white"  >-->
+
+<!--    <ion-back-button slot="start" ></ion-back-button>-->
+
+<!--  </ion-toolbar>-->
+<!--</ion-header>-->
+
+<ion-content [fullscreen]="true"  class="p-5">
+
+
+    <div class="flex justify-center flex-col p-5   " *ngIf="step < 3">
+      <div style="margin-left: -20px" class="w-[120%]  bg-secondary-100  z-10 h-[6px] mb-3 ">
+        <div class="bg-secondary-500 h-[6px] z-10" [style.width]="progress()" ></div>
+      </div>
+      <h1 class="font-syneBold text-black text-[28px]  ">Informations personnelles.!</h1>
+      <p class="font-LufgaRegular text-sm text-neutral-500">Saisissez les différents renseignements qui se
+        trouvent en dessous de . 👇 </p>
+    </div>
+
+    <br/>
+
+
+
+
+     <form  class="flex flex-col p-5  items-stretch h-full " [formGroup]="userForm"  (ngSubmit)="signUp()">
+
+       <div class=" ">
+         <div>
+           <div class=" border rounded pl-2 pr-2  mb-5 ">
+             <ion-input
+               name="firstname"
+               type="text"
+               formControlName="firstName"
+               placeholder="Nom"
+               [errorText]="FirstNameError"
+             ></ion-input>
+           </div>
+           <div class=" border rounded pl-2  pr-2 mb-5 ">
+             <ion-input
+               name="lastname"
+               type="text"
+               formControlName="lastName"
+               placeholder="Prenom"
+               [errorText]="LastNameError"></ion-input>
+           </div>
+           <div class=" border rounded pl-2 pr-2 mb-5 ">
+             <ion-input
+               name="email"
+               type="email"
+               formControlName="email" #email
+               errorText="{{EmailError}}"
+               placeholder="E-mail"></ion-input>
+           </div>
+           <div class=" border rounded pl-2 pr-2 mb-5 ">
+             <ion-input
+               name="password"
+               type="password"
+               formControlName="password" #password
+               errorText="{{PasswordError}}"
+               placeholder="Password"></ion-input>
+           </div>
+           <div class=" border rounded pl-2 pr-2 mb-5 ">
+             <ion-select
+               name="email"
+               class="w-full mt-2"
+               formControlName="gender"
+               placeholder="Genre"
+               label-placement="floating"
+             >
+               <ion-select-option value="male"> Homme </ion-select-option>
+               <ion-select-option value="female"> Femme </ion-select-option>
+             </ion-select>
+           </div>
+         </div>
+
+         <ion-button  [disabled]="userForm.invalid" class="  font-syneBold bg-green-700 rounded w-full h-12 mt-[40%]" type="submit" >
+           <div class="text-white">Continuer</div>
+         </ion-button>
+       </div>
+
+     </form>
+
+
+
+
+
+</ion-content>
