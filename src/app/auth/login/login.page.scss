@@ -1,0 +1,102 @@
+app-login{
+  font-size: small;
+  color: grey;
+  text-decoration-color: grey;
+  margin-top: 50px;
+}
+ion-toolbar{
+  --background: none !important;
+  margin-top: 30px !important;
+}
+
+ion-button{
+  --border-radius: 5px !important;
+}
+
+ion-input {
+  --border-color:  #D6DADB !important;
+  --border-width: 1px;
+  height: 54px ;
+  padding: 0 2px;
+  font-family: LufgaRegular;
+  color: #808C91;
+
+}
+
+.auto-input{
+  background: var(--ion-color-medium);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 20px;
+  // ion-input{
+  //   width: 56px;
+  //   border-radius: 8px;
+  //   --border-color: transparent !important;
+  // }
+  ion-icon{
+    margin: 10px;
+    border-radius: 50px;
+  }
+
+}
+
+
+.form-footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.divider{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  p{
+    border-bottom: 1px solid rgba(190, 190, 190, 0.7);
+    width: 80%;
+  }
+  span{
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+.page-footer{
+  display: flex;
+  justify-content: center;
+  a{
+    font-weight: bold;
+  }
+}
+
+
+
+ .social-auth{
+   border: 1px solid #0A183B;
+   ion-icon{
+     color: var(--ion-color-primary);
+   }
+  }
+
+.social-auth .ios .button .button-solid .ion-activatable .ion-focusable .hydrated{
+  border-radius: 10px;
+  :host(.button-full:not(.button-round)) .button-native {
+    border-radius: 10px;
+    border-right-width: 0px;
+    border-left-width: 0px;
+  }
+}
+
+ion-button {
+  --border-radius: 10px  !important;
+  --background: transparent;
+  --box-shadow: none;
+  color: black;
+
+}

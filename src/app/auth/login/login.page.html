@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-back-button slot="start"></ion-back-button>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+
+  <div class="py-2">
+    <div class="flex justify-center flex-col text-center mt-[4em] mb-[36px] ">
+      <h1 class="font-syneBold text-black text-2xl text-[28px]">Bienvenue sur Kiza!</h1>
+      <p class="font-LufgaRegular text-sm text-neutral-500">Veuillez vous connecter à votre compte.</p>
+    </div>
+    <br />
+
+    <form [formGroup]="authForm" (ngSubmit)="login()">
+
+      <div class="flex flex-col h-full content-between p-5">
+        <div>
+          <div class=" border rounded pl-2 pr-2  ">
+            <ion-input
+              name="email"
+              type="email"
+              formControlName="email" #email
+              errorText="{{emailError}}"
+              placeholder="E-mail"></ion-input>
+          </div>
+
+
+          <div class="border rounded flex flex-row justify-between pl-2 pr-2 mt-5  align-middle ">
+            <ion-input
+              name="password" [type]="show ? 'text' : 'password'" pattern="" formControlName="password" #password
+              placeholder="Your password" class="h-full relative pr-[10px]" fill="outline" errorText="{{passwordError}}" ></ion-input>
+            <ion-buttons (click)="show === !show">
+              <ion-icon  slot="end" [name]="show ? 'eye' :   'eye-off-outline'" class="m-auto">
+              </ion-icon></ion-buttons>
+          </div>
+        </div>
+
+
+        <!--      <p class="text-xs mt-3 text-neutral-500 mb-5 flex flex-col font-LufgaRegular items-end underline "-->
+        <!--         (click)="moveTo('/auth/forgot-password')"-->
+        <!--        >Mot de passe oubliez? </p>-->
+
+        <ion-button [disabled]="!authForm.valid" class=" mt-[10em] font-syneBold bg-green-700 rounded text-white w-full h-12" type="submit">
+          <div class="text-white">Continuer</div>
+        </ion-button>
+      </div>
+
+    </form>
+
+    <ion-text class="page-footer text-neutral-500 font-light text-sm mt-10">
+      <p class=" font-LufgaRegular text-[#808C91]">Vous n’avez pas de compte? <a class="text-primary-500 underline" (click)="moveTo('auth/signup')">Inscription</a></p>
+    </ion-text>
+
+
+
+
+
+  </div>
+
+
+
+</ion-content>
