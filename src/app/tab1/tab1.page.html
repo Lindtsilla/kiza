@@ -11,7 +11,7 @@
     </ion-card-content>
   </ion-card>
 
-  <div class="flex items-center justify-center gap-[16px] w-full">
+  <div class="flex items-center justify-center gap-[16px] w-full mt-[20px]">
     <ion-card>
       <ion-card-content class=" bg-gray-100 flex items-center justify-center gap-[8px] w-[150px]">
         <img src="../../assets/icon/Recharge.svg" alt="" srcset="">
@@ -21,21 +21,24 @@
     </ion-card>
     <ion-card>
       <ion-card-content class=" bg-gray-100 flex items-center justify-center gap-[8px] w-[150px] ">
-        <img src="../../assets/icon/Recharge.svg" alt="" srcset="">
-        <span class="">Retrait</span>
+        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M21.5 18.75L20.4395 17.6895L18.5 19.629V13.5H17V19.629L15.0605 17.6895L14 18.75L17.75 22.5L21.5 18.75Z" fill="#EC8C13"/>
+          <path d="M8 21V7.5H17V11.25H18.5V4.5C18.4996 4.1023 18.3414 3.721 18.0602 3.43978C17.779 3.15856 17.3977 3.0004 17 3H8C7.6023 3.0004 7.221 3.15856 6.93978 3.43978C6.65856 3.721 6.5004 4.1023 6.5 4.5V21C6.5004 21.3977 6.65856 21.779 6.93978 22.0602C7.221 22.3414 7.6023 22.4996 8 22.5H12.5V21H8ZM8 4.5H17V6H8V4.5Z" fill="#656263"/>
+          </svg>
+                  <span class="">Retrait</span>
         
       </ion-card-content>
     </ion-card>
   </div>
 
-  <div class="flex flex-col items-center justify-center w-full gap-[16px] px-[16px]">
+  <div class="flex flex-col items-center justify-center w-full gap-[16px] px-[16px] mt-[20px]">
     <div class="flex w-full justify-between items-center">
-      <h3 class="font-bold text-bold text-[18px]">Recentes transactions</h3>
+      <h3 class="font-bold text-bold text-[18px]">Recentes transactions sur 24H</h3>
       <img src="../../assets/icon/go.svg" alt="" srcset="">
     </div>
 
-    <div class=" w-full flex items-center justify-center w-full gap-[10px]">
-      <div class=" w-full flex items-center justify-between p-[4px] h-[80px] border-[1px] border-gray-200 rounded shadow">
+    <div class=" w-full flex flex-col items-center justify-center w-full gap-[10px]">
+      <div *ngFor="let items of  transactions" class=" w-full flex items-center justify-between p-[4px] h-[80px] border-[1px] border-gray-200 rounded shadow">
         <div class="flex items-center justify-center rounded-full h-[35px] w-[35px] bg-[#D1FADF] text-center ">M</div>
         <div class="flex-col gap-[3px]">
           <span class="text-gray-500">Mballa Linda</span>
