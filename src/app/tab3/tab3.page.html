@@ -1,6 +1,48 @@
+<ion-content [fullscreen]="true" class="overflow-y-scroll scrollbar-hide">
 
-
-<ion-content [fullscreen]="true">
+    <div class="container p-3 mt-10 overflow-y-scroll scrollbar-hide">
+  
+      <div >
+        <div class="heading mt-5">
+          <h1 class="font-bold text-black text-2xl mb-3 font-syneBold">Profil</h1>
+        </div>
+  
+        <div class="mb-[27px]" >
+          <div class="h-[51px] flex gap-4 items-center my-[13px]">
+            <div class="w-[48px] h-[48px] flex justify-start"> <img src="" alt="" srcset=""> </div>
+            <div class="flex flex-col flex-1">
+              <h1 class=" text-black  font-syneBold text-[14px]">{{user?.name ?? 'Profile de l\'utilisateur'}}</h1>
+              <h3 class=" text-neutral-500 font-LufgaRegular text-[10px] ">{{'Afficher le profil'}}</h3>
+            </div>
+  
+  <!--          <ion-icon size="small" [src]="assets.icons.arrow_right" ></ion-icon>-->
+          </div>
+        </div>
   
   
-</ion-content>
+      </div>
+  
+      <div class="mt-5">
+        <ion-list class="ion-no-padding">
+          <ion-list-header>
+            <h1 class="font-medium text-lg text-black mb-4 font-syneBold" >Paramètres</h1>
+          </ion-list-header>
+  
+          <ion-item class="flex justify-between ion-no-padding ion-no-margin" lines="none" *ngFor="let linkItem of menu" (click)="redictTo(linkItem?.redirect)">
+            <ion-icon slot="start" class="text-black" [src]="linkItem.avatar"></ion-icon>
+            <h3 class=" font-light font-LufgaRegular text-[16px] " [ngClass]="linkItem.linkLabel === 'Se déconnecter' ? 'text-red-500' : 'text-blackligth'" >{{linkItem.linkLabel}}</h3>
+            <ion-icon slot="end" size="small" [src]="linkItem.icon"  ></ion-icon>
+          </ion-item>
+  
+          <ion-item  class="flex justify-between ion-no-padding ion-no-margin" lines="none" (click)="signout()">
+            <ion-icon slot="start" [src]="logOut"></ion-icon>
+            <h3 class=" font-light font-LufgaRegular text-[16px] text-red-500 "  >{{'Se déconnecter'}}</h3>
+            <ion-icon slot="end" size="small" [src]="arrowForwardSharp"  ></ion-icon>
+          </ion-item>
+  
+        </ion-list>
+      </div>
+  
+    </div>
+  
+  </ion-content>
