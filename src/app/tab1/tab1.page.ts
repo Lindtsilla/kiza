@@ -9,4 +9,6 @@ export class Tab1Page {
 
   constructor() {}
 
+  transactions:any[]=[1,2,3,4,5,6];
+
 }
