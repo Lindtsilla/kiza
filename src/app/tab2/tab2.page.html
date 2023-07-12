@@ -1,17 +1,33 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class=" w-full flex flex-col items-center justify-center w-full gap-[30px] px-[16px] mt-[30px]">
+      <h3 class="font-bold text-bold text-[18px] ">Liste de beneficiaire</h3>
+ 
+      <div class=" w-full flex flex-col gap-[20px] px-[16px]">
+        <div class=" w-full flex justify-between items-center" *ngFor="let contact of contacts">
+          <div class="flex gap-[10px] items-center">
+            <div class="flex items-center justify-center rounded-full h-[35px] w-[35px] bg-[#D1FADF] text-center">M</div>
+          <div class="flex flex-col gap-[3px]">
+            <span class="font-bold">Moi</span>
+            <span class="">690396158</span>
+          </div>
+          </div>
+        
+          
+        </div>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+      </div>
+      <div class="bottom-[100px] fixed flex items-center justify-center rounded-full h-[40px] w-[40px] bg-[#7F56D9] " id="open-modal" expand="block">
+        <div class="text-center font-bold text-white text-xl">+</div>
+     </div>
+  </div>
+
+ 
+  <ion-modal trigger="open-modal" [initialBreakpoint]="0.8" [breakpoints]="[0, 0.5]">
+    <ng-template>
+      <div class="block">Block of Content</div>
+    </ng-template>
+  </ion-modal>
+
 </ion-content>

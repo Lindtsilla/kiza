@@ -1,37 +1,59 @@
-<!-- <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
-  </ion-toolbar>
-</ion-header> -->
 
-<!-- <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-</ion-content> -->
-
-<ion-content [fullscreen]="true">
- 
+<ion-content [fullscreen]="true"  class=" bg-[#F9F5FF]" >
+ <div class="h-[100%] bg-[#F9F5FF]">
   <ion-card>
-    <!-- <ion-card-header>
-      <ion-card-title> 2,000,000 XAF</ion-card-title>
-      <ion-card-subtitle>Solde</ion-card-subtitle>
-    </ion-card-header> -->
-  
-    <ion-card-content>
-      <div class="cardre">
-        <span class="solde">Solde</span>
-        <span class="amont">2,000,000 XAF</span>
-
-        <h1 class="text-3xl font-bold underline">
-          Hello world!
-        </h1>
+    <ion-card-content class=" bg-[#027A48]">
+      <div class="flex flex-col gap-[8px] justify-center items-center p-[10px] ">
+        <span class=" text-[white] text-[28px] text-center">Solde</span>
+        <span class="  text-[white] text-[28px] text-center font-bold ">2,000,000 XAF</span>
       </div>
     </ion-card-content>
   </ion-card>
+
+  <div class="flex items-center justify-center gap-[16px] w-full">
+    <ion-card>
+      <ion-card-content class=" bg-gray-100 flex items-center justify-center gap-[8px] w-[150px]">
+        <img src="../../assets/icon/Recharge.svg" alt="" srcset="">
+        <span class="">Recharge</span>
+        
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <ion-card-content class=" bg-gray-100 flex items-center justify-center gap-[8px] w-[150px] ">
+        <img src="../../assets/icon/Recharge.svg" alt="" srcset="">
+        <span class="">Retrait</span>
+        
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <div class="flex flex-col items-center justify-center w-full gap-[16px] px-[16px]">
+    <div class="flex w-full justify-between items-center">
+      <h3 class="font-bold text-bold text-[18px]">Recentes transactions</h3>
+      <img src="../../assets/icon/go.svg" alt="" srcset="">
+    </div>
+
+    <div class=" w-full flex items-center justify-center w-full gap-[10px]">
+      <div class=" w-full flex items-center justify-between p-[4px] h-[80px] border-[1px] border-gray-200 rounded shadow">
+        <div class="flex items-center justify-center rounded-full h-[35px] w-[35px] bg-[#D1FADF] text-center ">M</div>
+        <div class="flex-col gap-[3px]">
+          <span class="text-gray-500">Mballa Linda</span>
+          <div class="flex gap-[10px]">
+            <span class="">Retrait</span>
+            <div class="font-bold">+ 150,000 Xaf</div>
+          </div>
+        </div>
+        <div class="flex items-center justify-center rounded-lg bg-[#D1FADF]  h-[30px] px-[6px]">
+         <span class="text-[#039855] text-center text-sm"> succes</span>
+        </div>
+
+      </div>
+    </div>
+   
+  </div>
+ </div>
+ 
+ 
+
 </ion-content> 

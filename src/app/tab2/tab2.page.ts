@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class Tab2Page {
 
+  contacts:any[]=[1,2,3,4]
   constructor() {}
 
 }
