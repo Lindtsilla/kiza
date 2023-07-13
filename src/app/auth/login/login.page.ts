@@ -3,8 +3,6 @@ import { CommonModule } from '@angular/common';
 import {FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators} from '@angular/forms';
 import {AlertController, IonicModule, isPlatform, LoadingController} from '@ionic/angular';
 import {ActivatedRoute, Router, RouterLink, RouterModule} from "@angular/router";
-
-
 import {Capacitor} from "@capacitor/core";
 import {AuthService} from "../../services/auth.service";
 
@@ -69,6 +67,8 @@ export class LoginPage implements OnInit {
 
   private returnUrl : string = '';
 
+  eye: boolean = false;
+
   constructor(private router: Router) {
     this.activeRoute.queryParams.subscribe(async (params) => {
       if(params['returnUrl']) {
@@ -81,6 +81,16 @@ export class LoginPage implements OnInit {
 
   ngOnInit() {
 
+  }
+
+  seaEye() {
+    this.eye = !this.eye;
+
+  }
+
+  prevRoute() {
+   this.router.navigate(['auth/singup']);
+  
   }
 
    async login(){

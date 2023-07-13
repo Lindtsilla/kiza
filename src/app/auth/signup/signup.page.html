@@ -9,10 +9,12 @@
       <div style="margin-left: -20px" class="w-[120%]  bg-secondary-100  z-10 h-[6px] mb-3 ">
         <div class="bg-secondary-500 h-[6px] z-10" [style.width]="progress()"></div>
       </div>
-     
-      <h1 class="font-syneBold text-white text-[30px] text-center font-bold">signUp</h1>
-      <p class="font-LufgaRegular text-md text-neutral-500 text-center"> 👇 
-      </p>
+      <div class="flex items-center justify-center">
+        <img src="../../../assets/icon/kiza.png" alt="" srcset="" class="w-[200px] h-[200px]">
+
+      </div>
+      <h1 class=" text-[30px] text-[#b8FF12] font-bold text-center">Sign Up</h1>
+      <p class="font-LufgaRegular text-md text-neutral-500 text-center"> 👇 </p>
     </div>
 
     <br/>
@@ -20,7 +22,7 @@
 
 
 
-     <form  class=" w-full flex-1 flex flex-col  w-full  px-[30px] py-[60px] " [formGroup]="userForm"  (ngSubmit)="signUp()">
+     <form  class=" w-full flex-1 flex flex-col  w-full  px-[30px] py-[40px] " [formGroup]="userForm"  (ngSubmit)="signUp()">
 
        <div class=" flex flex-col w-full justify-between h-full ">
          <div>
