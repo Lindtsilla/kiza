@@ -1,3 +1,7 @@
+ion-content{
+  --background:#7F56D9;
+}
+
 app-login{
   font-size: small;
   color: grey;
@@ -30,39 +34,8 @@ ion-input{
   border-top: none !important;
 }
 
-//ion-intl-tel-input ,ion-input {
-//  --border-color:  #D6DADB !important;
-//  --border-width: 1px;
-//  height: 54px ;
-//  padding: 0 2px;
-//  font-family: LufgaRegular;
-//  color: #808C91;
-//  margin: 32px 0;
-//
-//}
-//
-//ion-intl-tel-input {
-//  border: 1px solid #D6DADB;
-//  border-radius: 6px;
-//}
 
 
-//.auto-input{
-//  background: var(--ion-color-medium);
-//  display: flex;
-//  justify-content: space-between;
-//  align-items: center;
-//  width: 100%;
-//  border-radius: 5px;
-//  padding: 5px;
-//  margin-bottom: 20px;
-//
-//  ion-icon{
-//    margin: 10px;
-//    border-radius: 50px;
-//  }
-//
-//}
 
 
 .form-footer{
@@ -116,11 +89,10 @@ ion-input{
 }
 
 ion-button {
-  --border-radius: 10px  !important;
-  --background: transparent;
-  --box-shadow: none;
-  color: black;
-  --background: #0A183B;
+  --border-radius: 30px  !important;
+  --box-shadow: #221237;
+  color: #7F56D9;
+  --background: #7F56D9;
 
 }
 
@@ -129,8 +101,10 @@ ion-button {
 
 }
 
-//#step2 ion-input{
-//  margin: 16px 0 !important;
-//
-//}
+form{
+  margin: auto;
+  background-color: whitesmoke;
+  border-top-left-radius: 30px;
+  border-top-right-radius:30px ;
+}
 
