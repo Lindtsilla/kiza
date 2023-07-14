@@ -23,7 +23,7 @@ export class SignupPage implements OnInit, AfterViewInit {
   //   if (el) {
   //   }
   // }
-
+  eye: boolean = false;
   private authService: AuthService = inject(AuthService);
 
 
@@ -117,6 +117,7 @@ export class SignupPage implements OnInit, AfterViewInit {
 // (this.phoneNumber?.value as any)?.internationalNumber?.replaceAll(' ', '')
 
   async signUp() {
+
     const user: any = {
       ...this.userForm.value as any,
       name: `${this.userForm.value.firstName} ${this.userForm.value.lastName}`
@@ -134,12 +135,10 @@ export class SignupPage implements OnInit, AfterViewInit {
     }
 
     await loading.dismiss();
+    localStorage.setItem('myprofil', JSON.stringify(this.userForm))
 
 
   }
-
-
-
 
 
 
@@ -191,7 +190,10 @@ export class SignupPage implements OnInit, AfterViewInit {
     return this.secondForm.get('confirmPassword');
   }
 
+  seaEye() {
+    this.eye = !this.eye;
 
+  }
   //Error form on
 
   get FirstNameError() {
