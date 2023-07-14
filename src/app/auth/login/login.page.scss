@@ -1,3 +1,7 @@
+ion-content{
+  --background:#7F56D9;
+}
+
 app-login{
   font-size: small;
   color: grey;
@@ -23,6 +27,11 @@ ion-input {
 
 }
 
+ion-icon{
+  color:white;
+  font-size: 25px;
+}
+
 .auto-input{
   background: var(--ion-color-medium);
   display: flex;
@@ -32,11 +41,7 @@ ion-input {
   border-radius: 5px;
   padding: 5px;
   margin-bottom: 20px;
-  // ion-input{
-  //   width: 56px;
-  //   border-radius: 8px;
-  //   --border-color: transparent !important;
-  // }
+ 
   ion-icon{
     margin: 10px;
     border-radius: 50px;
@@ -86,6 +91,7 @@ ion-input {
 
 .social-auth .ios .button .button-solid .ion-activatable .ion-focusable .hydrated{
   border-radius: 10px;
+  background: none;
   :host(.button-full:not(.button-round)) .button-native {
     border-radius: 10px;
     border-right-width: 0px;
@@ -94,9 +100,21 @@ ion-input {
 }
 
 ion-button {
-  --border-radius: 10px  !important;
-  --background: transparent;
-  --box-shadow: none;
-  color: black;
+  --border-radius: 30px  !important;
+  --box-shadow: #221237;
+  color: #7F56D9;
+  --background: #7F56D9;
 
+}
+
+.icon-button{
+  --background: none;
+
+}
+
+form{
+  margin: auto;
+  background-color: whitesmoke;
+  border-top-left-radius: 30px;
+  border-top-right-radius:30px ;
 }

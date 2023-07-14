@@ -1,7 +1,8 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, inject, OnInit, ViewChild } from '@angular/core';
 import { Contacts, GetContactOptions, GetContactsResult } from '@capacitor-community/contacts';
 import { AlertController } from '@ionic/angular';
 import { IonModal } from '../../../node_modules/@ionic/core/components/ion-modal.d';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-tab1',
@@ -10,6 +11,8 @@ import { IonModal } from '../../../node_modules/@ionic/core/components/ion-modal
 })
 export class Tab1Page implements OnInit {
   loader: boolean = false;
+  private authService: AuthService = inject(AuthService);
+
 
   constructor(private alertCtrl: AlertController) {
     
@@ -26,6 +29,12 @@ this.setDataView();
   resultsContact = [...this.allContact];
   contactPhone:any[] = [];
   benfValue:any;
+  userForm:any={
+    firstName: '',
+    lastName: '',
+    email: '',
+    gender: '',
+  }
 
   @ViewChild('contactImport') contactImport!: IonModal
 
@@ -95,6 +104,10 @@ this.setDataView();
     this.contactImport.dismiss();
 
    }
+
+   async getprofile() {
+    this.userForm = await this.authService.getUser()
+  }
 
 
 setDataView() {

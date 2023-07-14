@@ -1,60 +1,79 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-back-button slot="start"></ion-back-button>
-  </ion-toolbar>
-</ion-header>
-<ion-content [fullscreen]="true">
 
-  <div class="py-2">
-    <div class="flex justify-center flex-col text-center mt-[4em] mb-[36px] ">
-      <h1 class="font-syneBold text-black text-2xl text-[28px]">Bienvenue sur Kiza!</h1>
-      <p class="font-LufgaRegular text-sm text-neutral-500">Veuillez vous connecter à votre compte.</p>
+<ion-content [fullscreen]="true">
+  
+
+  <div class=" w-full h-full flex flex-col items-center justify-center pt-[30px]">
+
+    <div class="w-full flex items-star pl-[30px]" (click)="prevRoute()">
+      <ion-icon name="arrow-undo-sharp"></ion-icon>
+    </div>
+
+    <div class="flex-[0.2] flex justify-center items-center flex-col text-center">
+      <div class="flex">
+        <img src="../../../assets/icon/kiza.png" alt="" srcset="" class="w-[200px] h-[200px]">
+      </div>
+      <!-- <h1 class=" text-[30px] font-bold text-[#b8FF12]">Welcome to  Kiza-Cash!</h1> -->
+      <h1 class=" text-[30px] text-[#b8FF12] font-bold">Login</h1>
+      <p class="font-LufgaRegular text-md text-neutral-500 text-center mt-1"> 👇 </p>
     </div>
     <br />
 
-    <form [formGroup]="authForm" (ngSubmit)="login()">
+    <form [formGroup]="authForm" (ngSubmit)="login()" class=" w-full flex-1 flex flex-col  justify-between w-full h-full px-[30px] py-[30px] ">
 
-      <div class="flex flex-col h-full content-between p-5">
+      <div class=" w-full flex flex-col ">
         <div>
-          <div class=" border rounded pl-2 pr-2  ">
+
+          <div class="border rounded pl-2 mb-5 border-primary-600">
             <ion-input
               name="email"
               type="email"
               formControlName="email" #email
               errorText="{{emailError}}"
-              placeholder="E-mail"></ion-input>
+              placeholder="E-mail">
+            </ion-input>
           </div>
 
 
-          <div class="border rounded flex flex-row justify-between pl-2 pr-2 mt-5  align-middle ">
+          <div class="border border-primary-600 rounded flex flex-row justify-between pl-2 pr-2">
             <ion-input
-              name="password" [type]="show ? 'text' : 'password'" pattern="" formControlName="password" #password
-              placeholder="Your password" class="h-full relative pr-[10px]" fill="outline" errorText="{{passwordError}}" ></ion-input>
-            <ion-buttons (click)="show === !show">
-              <ion-icon  slot="end" [name]="show ? 'eye' :   'eye-off-outline'" class="m-auto">
-              </ion-icon></ion-buttons>
+                name="password" 
+                [type]="eye ? 'text' : 'password'" 
+                pattern="" 
+                formControlName="password" #password
+                placeholder="Your password" 
+                class="h-full w-full relative pr-[10px]" 
+                fill="outline" 
+                errorText="{{passwordError}}">
+            </ion-input>
+
+            <svg *ngIf="eye" (click)="seaEye()" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke-width="1.5" stroke="currentColor" class="w-6 ">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            <svg *ngIf="!eye" (click)="seaEye()" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke-width="1.5" stroke="currentColor" class="w-6 ">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M3.98 8.223A10.477 10.477 0 001.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.45 10.45 0 0112 4.5c4.756 0 8.773 3.162 10.065 7.498a10.523 10.523 0 01-4.293 5.774M6.228 6.228L3 3m3.228 3.228l3.65 3.65m7.894 7.894L21 21m-3.228-3.228l-3.65-3.65m0 0a3 3 0 10-4.243-4.243m4.242 4.242L9.88 9.88" />
+            </svg>
+
           </div>
+
         </div>
 
 
-        <!--      <p class="text-xs mt-3 text-neutral-500 mb-5 flex flex-col font-LufgaRegular items-end underline "-->
-        <!--         (click)="moveTo('/auth/forgot-password')"-->
-        <!--        >Mot de passe oubliez? </p>-->
+      
 
-        <ion-button [disabled]="!authForm.valid" class=" mt-[10em] font-syneBold bg-green-700 rounded text-white w-full h-12" type="submit">
-          <div class="text-white">Continuer</div>
+        <ion-button [disabled]="!authForm.valid" class=" mt-[10em] font-syneBold  text-white w-full h-14" type="submit">
+          <div class="text-white font-bold text-md">Login</div>
         </ion-button>
       </div>
+      <ion-text class="page-footer text-neutral-500 font-light text-sm mt-10">
+        <p class=" font-LufgaRegular text-[#808C91] ">You don't have an account? <a class="text-primary-500 underline" (click)="moveTo('auth/signup')">Sign Up</a></p>
+      </ion-text>
 
     </form>
-
-    <ion-text class="page-footer text-neutral-500 font-light text-sm mt-10">
-      <p class=" font-LufgaRegular text-[#808C91]">Vous n’avez pas de compte? <a class="text-primary-500 underline" (click)="moveTo('auth/signup')">Inscription</a></p>
-    </ion-text>
-
-
-
-
 
   </div>
 
