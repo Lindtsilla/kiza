@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const { fontFamily } = require('tailwindcss/defaultTheme');
+
 module.exports = {
   content: [
     "./src/**/*.{html,ts}",
@@ -35,24 +37,15 @@ module.exports = {
         700:'#B42318',
       },
        },
-      // fontFamily: {
-      //   sans: ['Inter var', ...fontFamily.sans],
-      //   mono: ['Roboto Mono', ...fontFamily.mono],
-      //   syne: ['syne', 'sans-serif'],
-      //   syneBold: ['syneBold', 'sans-serif'],
-      //   syneRegular: ['syneRegular', 'sans-serif'],
-      //   syneMedium: ['syneMedium', 'sans-serif'],
-      //   lufgaLight: ['lufgaLight', 'sans-serif'],
-      //   lufgaBold: ['lufgaBold', 'sans-serif'],
-      //   lufgaSemiBold: ['lufgaSemiBold', 'sans-serif'],
-      //   LufgaBlack: ['LufgaBlack', 'sans-serif'],
-      //   LufgaRegular: ['LufgaRegular', 'sans-serif'],
-      //   LufgaMedium: ['LufgaMedium', 'sans-serif'],
-      //   syneSemiBold: ['syneSemiBold', 'sans-serif'],
+      fontFamily: {
+        sans: ['Inter var', ...fontFamily.sans],
+        mono: ['Roboto Mono', ...fontFamily.mono],
+         sonaBold: ['sonaBold', 'sans-serif'],
+        sonaRegular: ['sonaRegular', 'sans-serif'],
+        sonaMedium: ['sonaMedium', 'sans-serif'],
+         sonaSemiBold: ['sonaSemiBold', 'sans-serif'],
 
-        
-
-      //  },
+       },
     },
   },
   plugins: [],

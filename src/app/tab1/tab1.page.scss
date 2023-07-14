@@ -1,0 +1,59 @@
+ion-toolbar, ion-content{
+    --padding-start: 16px;
+    --padding-end: 16px;
+}
+
+ion-button{
+    --background: transparent;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+}
+
+ion-toolbar {
+     --background: #ffff;
+    --box-shadow: none !important;
+    height: 57px;
+}
+
+.header-md::after {
+    /* Removes the toolbar shadow. */
+    background: none !important;
+  }
+  
+  .header-ios ion-toolbar:last-of-type {
+    --border-width: 0px;
+}
+
+.bg-grand{
+    background-color: linear-gradient(to right, rgb(187, 247, 208), rgb(74, 222, 128), rgb(34, 197, 94));
+}
+
+svg{
+    height: 30px !important;
+    width: 30px !important;
+}
+
+#subData{
+    --background-activated: #8b5cf6;
+     --background-focused: #8b5cf6;
+     --background-hover: #8b5cf6;
+     --background-activated-opacity: 1;
+     --background-focused-opacity: 1;
+     --background-hover-opacity: 1;
+    width: 100% !important; 
+    height: 51px !important;
+    margin: unset !important;
+ }
+
+ #subDataImport{
+    --background-activated: #BFF0C8 !important;
+    --background-focused: #BFF0C8 !important;
+    --background-hover: #BFF0C8 !important;
+    --background-activated-opacity: 1;
+    --background-focused-opacity: 1;
+    --background-hover-opacity: 1;
+   width: 100% !important; 
+   height: 40px !important;
+   margin: unset !important;
+ }

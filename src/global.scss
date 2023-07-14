@@ -33,46 +33,28 @@
 
 
 
-// @layer base {
+@layer base {
   
-//     @font-face {
-//       font-family: "syne";
-//       src: url("../src/assets/Syne/static/Syne-SemiBold.ttf");
-//    }
+    @font-face {
+      font-family: "sona";
+      src: url("../src/assets/Sora/Sora-VariableFont_wght.ttf");
+   }
   
-//    @font-face {font-family: "syneBold";
-//     src: url("../src/assets/Syne/static/Syne-Bold.ttf");
-//   }
+   @font-face {font-family: "sonaBold";
+    src: url("../src/assets/Sora/static/Sora-Bold.ttf");
+}
   
-//   @font-face {font-family: "syneSemiBold";
-//     src: url("../src/assets/Syne/static/Syne-SemiBold.ttf");
-//   }
+  @font-face {font-family: "sonaSemiBold";
+    src: url("../src/assets/Sora/static/Sora-SemiBold.ttf");
+}
   
-//   @font-face {font-family: "syneRegular";
-//     src: url("../src/assets/Syne/static/Syne-Regular.ttf");
-//   }
+  @font-face {font-family: "sonaRegular";
+    src: url("../src/assets/Sora/static/Sora-Regular.ttf");
+  }
   
-//   @font-face {font-family: "syneMedium";
-//     src: url("../src/assets/Syne/static/Syne-Medium.ttf");
-//   }
+  @font-face {font-family: "sonaMedium";
+    src: url("../src/assets/Sora/static/Sora-Medium.ttf");
+  }
   
-//    @font-face {font-family: "lufgaLight";
-//     src: url("../src/assets/lufga-cufonfonts/LufgaLight.ttf");
-//   }
-  
-//   @font-face {font-family: "lufgaBold";
-//     src: url("../src/assets/lufga-cufonfonts/LufgaBold.ttf");
-//   }
-  
-//   @font-face {font-family: "lufgaSemiBold";
-//     src: url("../src/assets/lufga-cufonfonts/LufgaSemiBold.ttf");
-//   }
-  
-//   @font-face {font-family: "LufgaRegular";
-//    src: url("../src/assets/lufga-cufonfonts/LufgaRegular.ttf");
-//   }
-  
-//   @font-face {font-family: "LufgaMedium";
-//     src: url("../src/assets/lufga-cufonfonts/LufgaMedium.ttf");
-//    }
-//   }
+
+  }
