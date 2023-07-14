@@ -11,6 +11,7 @@ import { AuthService } from '../services/auth.service';
 })
 export class Tab1Page implements OnInit {
   loader: boolean = false;
+  show:boolean = false;
   private authService: AuthService = inject(AuthService);
 
 
@@ -35,6 +36,8 @@ this.setDataView();
     email: '',
     gender: '',
   }
+  benId!:string;
+  index=0;
 
   @ViewChild('contactImport') contactImport!: IonModal
 
@@ -68,8 +71,8 @@ this.setDataView();
   formatDataGettingPhone(data: GetContactsResult ){
 
     let contact:any[] = [],
-     ben: any,
-     allContact =[];
+     ben: any;
+     this.contactPhone =[];
 
 
     for(let item of data.contacts) {
@@ -77,13 +80,12 @@ this.setDataView();
       let phone  = item.phones ? item.phones : []
 
       for(let x of phone){
-        allContact.push({
+ 
+        this.contactPhone.push({
           name: item?.name?.display,
           numberWithCode: x.number,
           real_id: x.isPrimary
-        })
-
-        this.contactPhone = [...this.allContact];
+        });
       }
        
     }
@@ -95,12 +97,16 @@ this.setDataView();
     return JSON.parse(localStorage.getItem('contact') as any)
   }
 
-  setBenf(setBenf:any) {
-    this.benfValue = this.contactPhone.find((x: any) => x.real_id == setBenf);
-   }
+  
+
+   setBenf(setBenf:any) {
+    this.benfValue = this.contactPhone.find((x: any) => x.numberWithCode == setBenf);
+    this.benId = setBenf;
+  }
 
    addContactPhone(){
-    localStorage.setItem('contact', JSON.stringify(this.benfValue));
+    localStorage.setItem('contact', JSON.stringify([...this.allContact, this.benfValue]));
+    this.allContact = this.returnData();
     this.contactImport.dismiss();
 
    }
@@ -113,7 +119,7 @@ this.setDataView();
 setDataView() {
   if(this.returnData()?.length > 0) this.resultsContact = this.returnData();
   else{
-    this.allContact = [
+    this.resultsContact = [
       {
         name: 'Linda',
         numberWithCode: '237 699 99 99 99',
@@ -125,8 +131,7 @@ setDataView() {
         real_id: ''
       }
     ];
-    this.resultsContact = [...this.allContact];
-  }
+   }
 }
    async importContact() {
 
