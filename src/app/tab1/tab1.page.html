@@ -107,8 +107,8 @@
     </div>
 
     <div class="mt-[50px] w-full flex flex-col">
-      <div class=" mb-4  text-[#1C1F27] text-xl font-sonaRegular">Action sur mon kiza</div>
-      <div class="w-[100%]  my-[30px] flex items-center justify-start gap-[50px]">
+      <div class="text-slate-800  font-sonaRegular">Action sur mon kiza</div>
+      <div class="w-[100%]  my-[20px] flex items-center justify-start gap-[50px]">
 
          <div>
           <div
@@ -161,8 +161,8 @@
       </div>
     </div>
 
-    <div class="mt-[20px] w-full flex flex-col">
-      <div class=" mb-4  font-sonaRegular text-[#1C1F27] text-xl">Kiza transactions</div>
+    <div class="mt-[35px] w-full flex flex-col">
+      <div class="text-slate-800  font-sonaRegular mb-6">Kiza transactions</div>
 
       <div *ngFor="let x of transactions" class="w-[100%]  my-[16px] flex items-center justify-start gap-[50px]">
 
@@ -470,7 +470,7 @@
           <div class="w-full relative">
             <ion-button (click)="addContactPhone()" id="subData" class="my-[20px] rounded-lg h-[41px] w-full text-base font-interBold" [style.--background]="'#8b5cf6'"  >
               <div class="text-center text-white text-[16px] font-semibold font-robotoBold">Continuer</div>
-              <!-- <ion-spinner class="absolute right-4 text-while" *ngIf="loader"  name="bubbles"></ion-spinner> -->
+              <ion-spinner class="absolute right-4 text-while" *ngIf="loader"  name="bubbles"></ion-spinner>
             </ion-button>
           </div>
         </ion-toolbar>
