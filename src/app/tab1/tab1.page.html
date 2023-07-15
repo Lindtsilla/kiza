@@ -59,7 +59,7 @@
   <ion-toolbar class="relative flex items-center">
     <ion-buttons slot="start">
       <div class=" font-sonaRegular text-[#1C1F27] text-xl ">
-        Hi, Steves
+        Hi, Mballa
       </div>
     </ion-buttons>
 
@@ -180,8 +180,8 @@
               </div>
 
               <div>
-                <div class=" font-sonaSemiBold text-base">Steves</div>
-                <span class=" font-sonaRegular text-sm text-gray-300 pt-1">Recharge tel</span>
+                <div class=" font-sonaSemiBold text-base">{{x?.name}}</div>
+                <span class=" font-sonaRegular text-sm text-gray-300 pt-1">{{x?.motif}}</span>
               </div>
   
             </div>
@@ -189,8 +189,8 @@
           </div>
 
           <div class="flex flex-col justify-end">
-            <div class=" font-sonaSemiBold text-base">{{'30000' | number}} CFA</div>
-            <span class=" pt-1 text-end font-sonaRegular text-sm text-gray-300">21 May</span>
+            <div class=" font-sonaSemiBold text-base">{{x?.amount | number}} CFA</div>
+            <span class=" pt-1 text-end font-sonaRegular text-sm text-gray-300">{{x?.date}}</span>
           </div>
 
 

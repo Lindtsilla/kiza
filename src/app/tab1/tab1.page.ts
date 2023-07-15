@@ -25,7 +25,38 @@ this.setDataView();
 
    }
 
-  transactions:any[]=[1,2,3,4,5,6];
+  transactions:any[]=[
+    {
+      name: 'Maman',
+      amount: 180000,
+      date: '21 May',
+      motif: 'Recharge tel'
+    },
+    {
+      name: 'Steves',
+      amount: 63000,
+      date: '21 May',
+      motif: 'Recharge tel'
+    },
+    {
+      name: 'Ibrahim',
+      amount: 90000,
+      date: '21 May',
+      motif: 'Recharge tel'
+    },
+    {
+      name: 'Audrey',
+      amount: 120000,
+      date: '21 May',
+      motif: 'Recharge tel'
+    },
+    {
+      name: 'Thierno',
+      amount: 18000,
+      date: '21 May',
+      motif: 'Recharge tel'
+    }
+  ];
   allContact:any[] = [];
   resultsContact = [...this.allContact];
   contactPhone:any[] = [];
