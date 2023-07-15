@@ -1,12 +1,12 @@
 <!-- <ion-content [fullscreen]="true" class="overflow-y-scroll scrollbar-hide">
 
     <div class="container p-[16px] overflow-y-scroll scrollbar-hide">
-  
+
       <div >
         <div class="heading mt-5">
           <h1 class="font-bold text-black text-2xl mb-3 font-syneBold">Profil</h1>
         </div>
-  
+
         <div class="mb-[27px]" >
           <div class="h-[51px] flex gap-4 items-center my-[13px]">
             <div class="w-[48px] h-[48px] flex justify-start"> <img src="" alt="" srcset=""> </div>
@@ -14,37 +14,37 @@
               <h1 class=" text-black  font-syneBold text-[14px]">{{user?.name ?? 'Profile de l\'utilisateur'}}</h1>
               <h3 class=" text-neutral-500 font-LufgaRegular text-[10px] ">{{'Afficher le profil'}}</h3>
             </div>
-  
+
           </div>
         </div>
-  
-  
+
+
       </div>
 
-  
+
       <div class="mt-5">
         <ion-list class="ion-no-padding">
           <ion-list-header>
             <h1 class="font-medium text-lg text-black mb-4 font-syneBold" >Paramètres</h1>
           </ion-list-header>
-  
+
           <ion-item class="flex justify-between ion-no-padding ion-no-margin" lines="none" *ngFor="let linkItem of menu" (click)="redictTo(linkItem?.redirect)">
             <ion-icon slot="start" class="text-black" [src]="linkItem.avatar"></ion-icon>
             <h3 class=" font-light font-LufgaRegular text-[16px] " [ngClass]="linkItem.linkLabel === 'Se déconnecter' ? 'text-red-500' : 'text-blackligth'" >{{linkItem.linkLabel}}</h3>
             <ion-icon slot="end" size="small" [src]="linkItem.icon"  ></ion-icon>
           </ion-item>
-  
+
           <ion-item  class="flex justify-between ion-no-padding ion-no-margin" lines="none" (click)="signout()">
             <ion-icon slot="start" [src]="logOut"></ion-icon>
             <h3 class=" font-light font-LufgaRegular text-[16px] text-red-500 "  >{{'Se déconnecter'}}</h3>
             <ion-icon slot="end" size="small" [src]="arrowForwardSharp"  ></ion-icon>
           </ion-item>
-  
+
         </ion-list>
       </div>
-  
+
     </div>
-  
+
 </ion-content> -->
 
 
@@ -55,12 +55,12 @@
 
 
     <div class=" flex-[0.1] flex justify-center item-center flex-col ">
-    
+
       <div class="flex items-center justify-center">
         <img src="../../../assets/icon/kiza.png" alt="" srcset="" class="w-[200px] h-[200px]">
 
       </div>
-     
+
     </div>
 
     <br/>
@@ -69,12 +69,12 @@
 
 
      <div class=" w-full flex-1 flex flex-col  w-full  px-[30px] py-[40px] form shadow-xl  gap-[30px]" >
-      
+
       <div class="flex items-start justify-start gap-[10px]">
         <div class="w-[35px] h-[35px] rounded-full bg-primary-600">
 
         </div>
-        <h1 class=" text-[25px] text-gray-900 font-bold text-center">My Profil</h1> 
+        <h1 class=" text-[25px] text-gray-900 font-bold text-center">My Profil</h1>
 
       </div>
 
@@ -87,7 +87,7 @@
 
 
           <div class="flex flex-col gap-2 ">
-            <span>FirstName*</span>
+            <span>FirstName* {{userForm.firstName}}</span>
             <div class=" border rounded pl-2 pr-2  mb-5 border-primary-600 ">
               <ion-input
               readonly="true"
@@ -95,11 +95,11 @@
                 type="text"
                 [(ngModel)]="userForm.firstName"
                 placeholder="Nom"
-               
+
               ></ion-input>
             </div>
           </div>
-           
+
 
           <div class="flex flex-col gap-2 ">
             <span>lastName*</span>
@@ -110,7 +110,7 @@
                 type="text"
                 [(ngModel)]="userForm.lastName"
                 placeholder="Nom"
-               
+
               ></ion-input>
             </div>
           </div>
@@ -123,7 +123,7 @@
                 type="text"
                 [(ngModel)]="userForm.email"
                 placeholder="Nom"
-               
+
               ></ion-input>
             </div>
           </div>
@@ -136,14 +136,14 @@
                 type="text"
                 [(ngModel)]="userForm.gender"
                 placeholder="Nom"
-               
+
               ></ion-input>
             </div>
           </div>
-          
 
 
-           
+
+
          </div>
 
        </div>
@@ -153,7 +153,7 @@
 
   </div>
 
-  
+
 
 
 
