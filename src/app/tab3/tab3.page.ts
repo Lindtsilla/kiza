@@ -10,14 +10,14 @@ import { AuthService } from '../services/auth.service';
   selector: 'app-tab3',
   templateUrl: 'tab3.page.html',
   styleUrls: ['tab3.page.scss'],
- 
+
 })
 export class Tab3Page {
   user: any;
   private authService: AuthService = inject(AuthService);
 
   userForm:any={
-    firstName: '',
+    firstName: 'daevin',
     lastName: '',
     email: '',
     gender: '',
@@ -26,13 +26,17 @@ export class Tab3Page {
 
   constructor(
 
-  ) {}
+  ) {
+    console.log(this.userForm)
+  }
   async ngOnInit() {
     await this.getprofile();
+    console.log(this.userForm)
   }
 
  async getprofile() {
     this.userForm = await this.authService.getUser()
+   console.log(this.userForm)
   }
 
   protected readonly logOut = logOut;
